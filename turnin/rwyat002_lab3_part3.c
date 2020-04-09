@@ -19,21 +19,21 @@ int main(void) {
 	unsigned char uc_temp_port;
     /* Insert your solution below */
     while (1) {
-	if((PINA == 1) || (PINA == 2)){
+	if((PINA & 0x0F == 1) || (PINA & 0x0F  == 2)){
 		uc_temp_port = 0x60;
 	}
-	else if((PINA == 3) || (PINA == 4)){
+	else if((PINA & 0x0F == 3) || (PINA & 0x0F == 4)){
 		uc_temp_port = 0x70;
 	}
-	else if((PINA == 5) || (PINA == 6)){
+	else if((PINA & 0x0F == 5) || (PINA & 0x0F == 6)){
 		uc_temp_port = 0x38;
 	}
-	else if((PINA == 7) || (PINA == 8) || (PINA == 9)){
+	else if((PINA & 0x0F == 7) || (PINA & 0x0F == 8) || (PINA & 0x0F == 9)){
 		uc_temp_port = 0x3C;
 	}
-	else if((PINA == 10) || (PINA == 11) || (PINA == 12)){
+	else if((PINA & 0x0F == 10) || (PINA & 0x0F == 11) || (PINA & 0x0F == 12)){
 		uc_temp_port = 0x3E;}
-	else if((PINA == 13) || (PINA == 14) || (PINA == 15)){
+	else if((PINA & 0x0F == 13) || (PINA & 0x0F == 14) || (PINA & 0x0F == 15)){
 		uc_temp_port = 0x3F;
 	}
 	if((PINA & 0x10) && (PINA & 0x20) && !(PINA & 0x40)){
